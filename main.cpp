@@ -16,5 +16,17 @@ int main() {
     });
 
     std::cout << "Project Initialized!" << std::endl;
+    
+    // Виклик алгоритму Студента А
+    auto resultA = calculateA(data);
+    
+    // Використання structured bindings для отримання результату
+    auto [extremum_x_A, extremum_y_A, iterations_A] = *resultA; 
+    
+    std::cout << "\n--- Result of Student A (Golden Section) ---" << std::endl;
+    std::cout << "Extremum X: " << extremum_x_A << std::endl;
+    std::cout << "Extremum Y: " << extremum_y_A << std::endl;
+    std::cout << "Iterations: " << iterations_A << std::endl;
+
     return 0;
 }
