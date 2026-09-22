@@ -14,7 +14,17 @@ int main() {
         5.0,  // b
         1e-5  // epsilon
     });
-
     std::cout << "Project Initialized!" << std::endl;
+
+    auto resultB = calculateB(data);
+
+    if (resultB) {
+        auto [x_b, y_b, iters_b] = *resultB;
+        std::cout << "\n";
+        std::cout << "StudentB result:\n";
+        std::cout << "extreme point (x): " << x_b << "\n";
+        std::cout << "Value f(x):        " << y_b << "\n";
+        std::cout << "Count of iterations:   " << iters_b << "\n";
+    }
     return 0;
 }
