@@ -14,7 +14,9 @@ int main() {
         5.0,  // b
         1e-5  // epsilon
     });
+   
     std::cout << "Project Initialized!" << std::endl;
+
 
     auto resultB = calculateB(data);
 
